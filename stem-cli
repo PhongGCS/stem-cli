@@ -3,7 +3,14 @@
 
 define('STEM_CLI_DIR',rtrim(dirname(__FILE__),DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR);
 
-require_once STEM_CLI_DIR.'vendor/autoload.php';
+if (file_exists(STEM_CLI_DIR.'vendor/autoload.php')) {
+	require STEM_CLI_DIR.'vendor/autoload.php';
+} elseif (file_exists(STEM_CLI_DIR.'../../autoload.php')) {
+	require STEM_CLI_DIR.'../../autoload.php';
+} else {
+	echo "Missing autoload.  Stem Command Line was installed improperly.\n";
+	die(1);
+}
 
 $app = new \Symfony\Component\Console\Application('Stem CLI', '0.1');
 
