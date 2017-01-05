@@ -14,9 +14,9 @@
     }
   },
   "require": {
-    "symfony/console": "3.2.x-dev",
-    "symfony/process": "3.2.x-dev",
-    "symfony/filesystem": "3.2.x-dev",
+    "symfony/console": "3.2.1",
+    "symfony/process": "3.2.1",
+    "symfony/filesystem": "3.2.1",
     "duncan3dc/blade": "^3.3"
 
   },
