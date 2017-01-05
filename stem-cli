@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+define('STEM_CLI_DIR',rtrim(dirname(__FILE__),DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR);
+
+require_once STEM_CLI_DIR.'vendor/autoload.php';
+
+$app = new \Symfony\Component\Console\Application('Stem CLI', '0.1');
+
+$app->add(new ILab\Stem\CommandLine\Commands\InstallTrellisCommand());
+$app->add(new ILab\Stem\CommandLine\Commands\InstallBedrockCommand());
+$app->add(new ILab\Stem\CommandLine\Commands\InstallStemCommand());
+$app->add(new \ILab\Stem\CommandLine\Commands\NewProjectCommand());
+$app->add(new \ILab\Stem\CommandLine\Commands\AddAppCommand());
+
+\ILab\Stem\CommandLine\Utilities\StemCLITools::findWordpressPaths(getcwd());
+
+$app->run();

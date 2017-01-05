@@ -1,0 +1,27 @@
+{
+  "name": "interfacelab/stem-cli",
+  "description": "CLI for Stem for WordPress",
+  "minimum-stability": "dev",
+  "license": "lgpl",
+  "authors": [
+    {
+      "name": "Jon Gilkison",
+      "email": "jon@interfacelab.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ILab\\Stem\\CommandLine\\": "Classes/"
+    }
+  },
+  "require": {
+    "symfony/console": "3.2.x-dev",
+    "symfony/process": "3.2.x-dev",
+    "symfony/filesystem": "3.2.x-dev",
+    "duncan3dc/blade": "^3.3"
+
+  },
+  "bin": [
+    "stem-cli"
+  ]
+}
