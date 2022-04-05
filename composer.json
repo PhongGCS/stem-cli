@@ -17,8 +17,7 @@
     "symfony/console": "3.2.1",
     "symfony/process": "3.2.1",
     "symfony/filesystem": "3.2.1",
-    "duncan3dc/blade": "^3.3"
-
+    "duncan3dc/blade": "^4.11.0"
   },
   "bin": [
     "stem-cli"
